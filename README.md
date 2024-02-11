@@ -36,14 +36,14 @@ L'architecture déployée par ce script Terraform comprend :
 
    Dans le répertoire du projet, exécutez :
 
-terraform init
+```terraform init```
 
 Cette commande initialise Terraform avec les providers requis.
 
 3. **Formater le code**
 Exécutez :
 
-terraform fmt
+```terraform fmt```
 
 pour formater le main.tf 
 
@@ -51,7 +51,7 @@ pour formater le main.tf
 
 Exécutez :
 
-terraform validate
+```terraform validate```
 
 pour vérifier que votre code ne comporte pas d'erreur
 
@@ -59,7 +59,7 @@ pour vérifier que votre code ne comporte pas d'erreur
 
 Exécutez :
 
-terraform plan
+```terraform plan```
 
 pour voir les modifications que Terraform prévoit d'appliquer à votre infrastructure AWS.
 
@@ -67,7 +67,7 @@ pour voir les modifications que Terraform prévoit d'appliquer à votre infrastr
 
 Pour appliquer les modifications, exécutez :
 
-Terraform apply
+```Terraform apply```
 
 Après confirmation, Terraform créera les ressources sur AWS.
 
@@ -79,4 +79,4 @@ Après confirmation, Terraform créera les ressources sur AWS.
 
 Pour supprimer les ressources créées par Terraform, exécutez :
 
-terraform destroy
+```terraform destroy```
