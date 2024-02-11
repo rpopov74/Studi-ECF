@@ -6,7 +6,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # Créer un DataFrame Spark simple
-data = [("Hello World!",)]
+data = [("Coucou STUDI!",)]
 columns = ["Message"]
 df = spark.createDataFrame(data, columns)
 
