@@ -113,6 +113,7 @@ Dans le répertoire contenant le Dockerfile, exécutez la commande suivante pour
 
 
 ```docker build -t pyspark-hello-world . ```
+
 Cette commande construit une image Docker nommée pyspark-hello-world en utilisant les instructions fournies dans le Dockerfile.
 
 ## Exécution
@@ -120,7 +121,9 @@ Une fois l'image Docker construite, vous pouvez exécuter le script en lançant 
 
 
 ```docker run --rm pyspark-hello-world```
+
 Cette commande démarre un conteneur à partir de l'image pyspark-hello-world, exécute le script hello_world.py, puis supprime le conteneur après l'exécution.
 
 Contenu du Script Python (hello_world.py)
+
 Le script initialise une session Spark, crée un DataFrame Spark simple avec un message, affiche le message, puis arrête la session Spark.
