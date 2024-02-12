@@ -102,12 +102,12 @@ requirements.txt : Un fichier contenant les dépendances Python nécessaires à 
 Dockerfile : Les instructions pour construire l'image Docker contenant l'environnement nécessaire pour exécuter le script.
 
 ## Configuration
-# 1. Préparation de l'environnement
+ 1. **Préparation de l'environnement**
 Avant de pouvoir exécuter le script, vous devez construire l'image Docker à partir du Dockerfile fourni. 
 
 Assurez-vous que le fichier requirements.txt contient toutes les dépendances nécessaires, notamment pyspark.
 
-# 2. Construction de l'image Docker
+ 2. **Construction de l'image Docker**
 
 Dans le répertoire contenant le Dockerfile, exécutez la commande suivante pour construire l'image Docker :
 
