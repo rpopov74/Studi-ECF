@@ -1,0 +1,15 @@
+# Image avec spark
+FROM jupyter/all-spark-notebook:latest
+
+# Définis le répertoire de travail dans le conteneur
+WORKDIR /app
+
+# Copie des fichiers de dépendances et installation
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copie du script Python dans le conteneur
+COPY hello_world.py .
+
+# Commande pour exécuter le script
+CMD ["python", "./hello_world.py"]
