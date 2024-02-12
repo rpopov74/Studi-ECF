@@ -129,4 +129,4 @@ Cette commande démarre un conteneur à partir de l'image pyspark-hello-world, e
 
 Contenu du Script Python (hello_world.py)
 
-Le script initialise une session Spark, crée un DataFrame Spark simple avec un message, affiche le message, puis arrête la session Spark.
+Le script initialise une session Spark, crée un DataFrame Spark simple avec un message, affiche le message, puis arrête la session Spark. 
