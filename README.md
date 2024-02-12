@@ -80,3 +80,39 @@ Après confirmation, Terraform créera les ressources sur AWS.
 Pour supprimer les ressources créées par Terraform, exécutez :
 
 ```terraform destroy```
+
+ 2- Deploiement d'une application en continu
+
+Ce projet contient un script Python simple qui utilise Apache Spark pour créer et afficher un DataFrame contenant un message. Ce README guide à travers l'installation, la configuration et l'exécution du script dans un conteneur Docker basé sur une image Jupyter avec Spark préinstallé.
+
+Prérequis
+Docker installé sur votre machine.
+Connaissance de base de Docker et Apache Spark.
+Structure du projet
+Le projet contient les fichiers suivants:
+
+hello_world.py : Le script Python qui utilise PySpark pour créer et afficher un DataFrame.
+requirements.txt : Un fichier contenant les dépendances Python nécessaires à installer.
+Dockerfile : Les instructions pour construire l'image Docker contenant l'environnement nécessaire pour exécuter le script.
+Configuration
+1. Préparation de l'environnement
+Avant de pouvoir exécuter le script, vous devez construire l'image Docker à partir du Dockerfile fourni. Assurez-vous que le fichier requirements.txt contient toutes les dépendances nécessaires, notamment pyspark.
+
+2. Construction de l'image Docker
+Dans le répertoire contenant le Dockerfile, exécutez la commande suivante pour construire l'image Docker :
+
+sh
+Copy code
+docker build -t pyspark-hello-world .
+Cette commande construit une image Docker nommée pyspark-hello-world en utilisant les instructions fournies dans le Dockerfile.
+
+Exécution
+Une fois l'image Docker construite, vous pouvez exécuter le script en lançant un conteneur à partir de cette image :
+
+sh
+Copy code
+docker run --rm pyspark-hello-world
+Cette commande démarre un conteneur à partir de l'image pyspark-hello-world, exécute le script hello_world.py, puis supprime le conteneur après l'exécution.
+
+Contenu du Script Python (hello_world.py)
+Le script initialise une session Spark, crée un DataFrame Spark simple avec un message, affiche le message, puis arrête la session Spark.
