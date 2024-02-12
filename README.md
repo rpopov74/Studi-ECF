@@ -102,8 +102,9 @@ requirements.txt : Un fichier contenant les dépendances Python nécessaires à 
 Dockerfile : Les instructions pour construire l'image Docker contenant l'environnement nécessaire pour exécuter le script.
 
 ## Configuration
+
  1. **Préparation de l'environnement**
- 
+
 Avant de pouvoir exécuter le script, vous devez construire l'image Docker à partir du Dockerfile fourni. 
 
 Assurez-vous que le fichier requirements.txt contient toutes les dépendances nécessaires, notamment pyspark.
@@ -118,6 +119,7 @@ Dans le répertoire contenant le Dockerfile, exécutez la commande suivante pour
 Cette commande construit une image Docker nommée pyspark-hello-world en utilisant les instructions fournies dans le Dockerfile.
 
 ## Exécution
+
 Une fois l'image Docker construite, vous pouvez exécuter le script en lançant un conteneur à partir de cette image :
 
 
