@@ -86,19 +86,29 @@ Pour supprimer les ressources créées par Terraform, exécutez :
 Ce projet contient un script Python simple qui utilise Apache Spark pour créer et afficher un DataFrame contenant un message. Ce README guide à travers l'installation, la configuration et l'exécution du script dans un conteneur Docker basé sur une image Jupyter avec Spark préinstallé.
 
 ## Prérequis
+
 Docker installé sur votre machine.
+
 Connaissance de base de Docker et Apache Spark.
+
 Structure du projet
+
 Le projet contient les fichiers suivants:
 
 hello_world.py : Le script Python qui utilise PySpark pour créer et afficher un DataFrame.
+
 requirements.txt : Un fichier contenant les dépendances Python nécessaires à installer.
+
 Dockerfile : Les instructions pour construire l'image Docker contenant l'environnement nécessaire pour exécuter le script.
+
 ## Configuration
 # 1. Préparation de l'environnement
-Avant de pouvoir exécuter le script, vous devez construire l'image Docker à partir du Dockerfile fourni. Assurez-vous que le fichier requirements.txt contient toutes les dépendances nécessaires, notamment pyspark.
+Avant de pouvoir exécuter le script, vous devez construire l'image Docker à partir du Dockerfile fourni. 
+
+Assurez-vous que le fichier requirements.txt contient toutes les dépendances nécessaires, notamment pyspark.
 
 # 2. Construction de l'image Docker
+
 Dans le répertoire contenant le Dockerfile, exécutez la commande suivante pour construire l'image Docker :
 
 
