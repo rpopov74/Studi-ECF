@@ -103,6 +103,7 @@ Dockerfile : Les instructions pour construire l'image Docker contenant l'environ
 
 ## Configuration
  1. **Préparation de l'environnement**
+ 
 Avant de pouvoir exécuter le script, vous devez construire l'image Docker à partir du Dockerfile fourni. 
 
 Assurez-vous que le fichier requirements.txt contient toutes les dépendances nécessaires, notamment pyspark.
