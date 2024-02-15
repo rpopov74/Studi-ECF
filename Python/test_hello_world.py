@@ -18,7 +18,7 @@ def test_dataframe_creation(spark_session):
     data = [("Coucou STUDI!",)]
     columns = ["Message"]
     df = spark_session.createDataFrame(data, columns)
-    
+
     # Vérifier que les nom de la colonne est correcte
     assert df.columns == ["Message"]
 
