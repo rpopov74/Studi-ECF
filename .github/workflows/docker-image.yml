@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file ./Python/dockerfile --tag coucou_studi:$(date +%s)
+      run: docker build . --file dockerfile --tag coucou_studi:$(date +%s)
