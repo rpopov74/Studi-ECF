@@ -22,5 +22,5 @@ jobs:
     - name: Build and push Docker image
       run: |
         cd ./Python
-        docker build . --file dockerfile --tag coucou_studi:lastest
+        docker build . --file dockerfile --tag popovv2/coucou_studi:lastest
         docker push popovv2/coucou_studi:lastest
