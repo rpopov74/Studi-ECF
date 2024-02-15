@@ -21,7 +21,7 @@ def test_dataframe_creation(spark_session):
     
     # Vérifier que les nom de la colonne est correcte
     assert df.columns == ["Message"]
-    
+
     # Vérifier que les données dans le DataFrame sont correctes
     collected_data = df.collect()
     assert collected_data[0]["Message"] == "Coucou STUDI!"
