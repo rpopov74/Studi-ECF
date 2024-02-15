@@ -14,5 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: cd ./Python && docker build . --file dockerfile --tag coucou_studi:$(date +%s)
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v1
+      with:
+        username: popovv2
+        password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+    - name: Build and push Docker image
+      run: |
+        cd ./Python
+        docker build . --file dockerfile --tag coucou_studi:lastest
+        docker push popovv2/coucou_studi:lastest
