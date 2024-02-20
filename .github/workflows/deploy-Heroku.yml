@@ -20,13 +20,13 @@ jobs:
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
     - name: Pull Docker image from Docker Hub
-      run: docker pull docker.io/popovv2/coucou_studi:latest
+      run: docker pull popovv2/coucou_studi:lastest
 
     - name: Login to Heroku Container Registry
       run: docker login --username=_ --password=${{ secrets.HEROKU_API_KEY }} registry.heroku.com
 
     - name: Tag the Docker image
-      run: docker tag docker.io/popovv2/coucou_studi:latest registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
+      run: docker tag popovv2/coucou_studi:lastest registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
 
     - name: Push to Heroku Container Registry
       run: docker push registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
@@ -36,4 +36,4 @@ jobs:
 
     - name: Clean up
       if: always()
-      run: docker image rm popovv2/coucou_studi:latest registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
+      run: docker image rm popovv2/coucou_studi:lastest registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
