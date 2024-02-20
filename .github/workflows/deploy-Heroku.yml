@@ -31,6 +31,12 @@ jobs:
     - name: Push to Heroku Container Registry
       run: docker push registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
 
+    - name: Heroku Login
+      run: heroku login -i
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        HEROKU_EMAIL: megevand.alexis@gmail.com
+    
     - name: Release the image to Heroku
       run: heroku container:release web -a ${{ secrets.HEROKU_APP_NAME }}
 
